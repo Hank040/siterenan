@@ -1,0 +1,462 @@
+$cor1: #191919;    
+$cor2: #FFB309;  
+$cor3: #4e4e4e;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Adiciona box-sizing global */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand {
+    img {
+        width: 150px !important;
+    }
+}
+
+.navbar {
+    background: $cor1 !important;
+
+    & .nav-link {
+        color: $cor2 !important;
+    }
+
+    & .navbar-toggler {
+        background: $cor2 !important;
+    }
+}
+
+.footer {
+    background: $cor1;
+    color: $cor2;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.carta-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem conforme a tela */
+}
+
+.carta-imagem {
+    flex: 1;
+    max-width: 500px; /* Aumenta o tamanho da imagem */
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    }
+}
+
+.carta-info {
+    flex: 2;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    word-wrap: break-word; /* Garante que o texto não ultrapasse os limites */
+
+    h1 {
+        font-size: 2.5rem;
+        color: $cor1;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .card-preco {
+        font-size: 1.5rem;
+        color: #11b52a;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .btn-voltar {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: $cor1;
+        color: $cor2;
+        text-decoration: none;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.3s, transform 0.2s;
+
+        &:hover {
+            background-color: $cor2;
+            color: $cor1;
+            transform: scale(1.05); /* Efeito de zoom suave */
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .carta-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carta-imagem {
+        max-width: 80%;
+    }
+
+    .carta-info {
+        max-width: 100%;
+    }
+
+    .img-carta {
+        max-width: 100%;
+        width: auto;
+    }
+}
+
+.img-carta {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do Botão Detalhe */
+.btn-detalhe {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: $cor1;
+    color: $cor2;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: auto;
+
+    &:hover {
+        background-color: $cor3;
+        color: $cor2;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.card-preco {
+    font-size: 18px;
+    color: #11b52a;
+}
+
+.banner {
+    img {
+        margin-top: 10px;
+        border-radius: 10px;
+        width: 100%;
+    }
+}
+
+.produto-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.produto-imagem {
+    flex: 1;
+    max-width: 300px;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.produto-detalhes {
+    flex: 2;
+    max-width: 600px;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .card-description {
+        margin: 20px 0;
+
+        p {
+            font-size: 1rem;
+            white-space: pre-wrap; /* Garante que a descrição longa não será cortada */
+        }
+    }
+}
+
+.card-preco {
+    font-size: 1.2rem;
+    color: #11b52a;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    background-color: $cor1;
+    color: $cor2;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: $cor3;
+    color: $cor2;
+}
+
+#contato {
+    margin-top: 50px;
+    text-align: center;
+
+    h2 {
+        font-size: 2.5rem;
+        color: $cor1;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+
+        label {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+
+    .contact-info {
+        margin-top: 30px;
+        font-size: 1.2rem;
+
+        p {
+            color: #333;
+        }
+
+        strong {
+            color: #ffcc00;
+        }
+    }
+}
+
+#quem-somos {
+    text-align: center;
+    margin-top: 50px;
+
+    h2 {
+        font-size: 2.5rem;
+        color: $cor1;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .team-section {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px;
+
+        .team-member {
+            text-align: center;
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            h4 {
+                margin-top: 10px;
+                font-size: 1.3rem;
+                color: #333;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #777;
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+html, body {
+    height: 100%; /* Garante que o corpo ocupe toda a altura da tela */
+}
+
+.container {
+    min-height: calc(100vh - 120px); /* O conteúdo vai ocupar o restante da altura da página, considerando a altura do footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Isso garante que o conteúdo e o footer fiquem corretamente distribuídos */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto; /* Isso empurra o footer para o final da página */
+}
+
+$cor1: #191919;    
+$cor2: #FFB309;  
+$cor3: #4e4e4e;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Adiciona box-sizing global */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.imagem-texto {
+    display: flex;  /* Organiza a imagem e o texto lado a lado */
+    flex-direction: row;  /* Alinha a imagem à esquerda e o texto à direita */
+    justify-content: space-between;
+    gap: 30px;  /* Espaço entre a imagem e o texto */
+    align-items: center;  /* Alinha verticalmente */
+    margin-top: 30px;
+}
+
+.produto-imagem {
+    flex-shrink: 0;  /* Impede que a imagem diminua de tamanho */
+    width: 50%;  /* A imagem ocupa 50% da largura disponível */
+}
+
+.img-carta {
+    width: 100%;  /* Faz a imagem ocupar toda a largura do seu contêiner */
+    height: auto;
+    max-width: 700px;  /* Limita o tamanho máximo da imagem */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar um efeito de profundidade */
+}
+
+#quem-somos {
+    flex: 1;  /* O texto ocupa o restante da área disponível */
+    max-width: 600px;
+    text-align: left;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#quem-somos h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#quem-somos p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: auto; /* Isso empurra o footer para o final da página */
+}
+
+@media (max-width: 768px) {
+    .imagem-texto {
+        flex-direction: column; /* Em telas menores, organiza a imagem e o texto em coluna */
+        gap: 20px;
+    }
+
+    .img-carta {
+        max-width: 100%;  /* Em telas pequenas, a imagem ocupa 100% da largura */
+    }
+}
